@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel='stylesheet' href='fullcalendar-3.1.0/fullcalendar.min.css'/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src='fullcalendar-3.1.0/lib/jquery.min.js'></script>
+    <script src='fullcalendar-3.1.0/lib/moment.min.js'></script>
+    <script src="semantic/semantic.min.js"></script>
+    <script src='fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+    <script>
+        $(document).ready(function () {
+            // page is ready
+            $('#calendar').fullCalendar({
+                // calendar properties
+            })
+
+            $(window).scroll(function (event) {
+                var scroll = $(window).scrollTop();
+                $('.masthead').css("background-position-y", -0.1 * scroll + "px");
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="masthead">
+    <div class="ui container">
+        <div class="ui centered stackable grid">
+            <div class="row">
+                <div class="ui centered grid" id="social-media-icons">
+                    <div class="four wide center aligned column">
+                        <a class="item" href="https://www.facebook.com/kleinPariser" target="_blank"><img
+                                src="img/facebook.png" class="social-media-icon"></a>
+                    </div>
+                    <div class="one wide column"></div>
+                    <div class="four wide center aligned column">
+                        <a class="item" href="https://www.youtube.com/user/sheaker1988" target="_blank"><img
+                                src="img/youtube.png" class="social-media-icon"></a>
+                    </div>
+                    <div class="one wide column"></div>
+                    <div class="four wide center aligned column">
+                        <a class="item" href="https://soundcloud.com/philipp-anders-7" target="_blank"><img
+                                src="img/soundcloud.png" class="social-media-icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="five wide center aligned column">
+                    <div class="ui inverted header" id="caption">Urban<br/>Dance<br/>
+                        Index<div class="ui inverted divider"></div><b>Leipzig</b>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="nine wide center aligned column">
+                    <h1 class="ui inverted header">
+                        Wo wann sein für Kurse, Freie Trainings, Battles und Jams.
+
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six wide center aligned column">
+                    <div class="themecolor ui huge right labeled icon button">Kontakt <i
+                            class="right arrow icon"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="ui container" id="calendar-container">
+    <div id='calendar'></div>
+</div>
+
+</body>
+</html>
